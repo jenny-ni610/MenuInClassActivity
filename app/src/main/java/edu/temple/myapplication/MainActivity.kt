@@ -71,8 +71,9 @@ class MainActivity : AppCompatActivity() {
             R.id.action_start -> binder?.start(100)
             R.id.action_pause -> binder?.pause()
             R.id.action_stop -> binder?.stop()
+            else -> return false
         }
-        return super.onOptionsItemSelected(item)
+        return true//super.onOptionsItemSelected(item)
     }
 
     override fun onDestroy() {
